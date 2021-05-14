@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32a05245-fb67-452f-9361-6c66d4cfbb47" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Comments.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Comments.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/comments.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/comments.blade.php" afterDir="false" />
     </list>
@@ -36,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Comments.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+            <state relative-caret-position="558">
+              <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
               <folding>
                 <element signature="e#37#55#0#PHP" expanded="true" />
               </folding>
@@ -48,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/livewire/comments.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="25" column="120" selection-start-line="25" selection-start-column="120" selection-end-line="25" selection-end-column="120" />
+            <state relative-caret-position="218">
+              <caret line="9" column="43" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -304,12 +303,12 @@
       <updated>1620826989097</updated>
       <workItem from="1620826990405" duration="979000" />
       <workItem from="1620828015203" duration="3662000" />
-      <workItem from="1620970635681" duration="6822000" />
+      <workItem from="1620970635681" duration="7834000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11463000" />
+    <option name="totallyTimeSpent" value="12475000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -442,15 +441,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/livewire/comments.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="25" column="120" selection-start-line="25" selection-start-column="120" selection-end-line="25" selection-end-column="120" />
+        <state relative-caret-position="218">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Livewire/Comments.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+        <state relative-caret-position="558">
+          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
           <folding>
             <element signature="e#37#55#0#PHP" expanded="true" />
           </folding>

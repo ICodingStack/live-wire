@@ -29,6 +29,7 @@ class Comments extends Component
         $comment->delete();
         //remove from $comments collection
         $this->comments=$this->comments->except($commnetId);
+        session()->flash('message', 'Post successfully deleted 😊');
     }
     public function addComment(){
          $this->validate(['newComment'=>'required|max:255']);
@@ -39,6 +40,7 @@ class Comments extends Component
        //push the new comment to array comments
        $this->comments->prepend($addNewComments);
        $this->newComment ="";
+        session()->flash('message', 'Post successfully added 😊');
 
     }
     public function render()
