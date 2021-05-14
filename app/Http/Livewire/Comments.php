@@ -4,19 +4,22 @@ namespace App\Http\Livewire;
 
 use Carbon\Carbon;
 use Livewire\Component;
+use Livewire\WithPagination;
+
 
 class Comments extends Component
 {
     //comments collection
-    public  $comments   ;
+//    public  $comments   ;
     public $newComment;
-
+    //allow u to navigate to next page without reload the page
+    use WithPagination;
 
     //auto excuited
-    public function mount(){
-        $allComments = \App\Model\comments::latest()->get();
-        $this->comments = $allComments;
-    }
+//    public function mount(){
+//        $allComments = \App\Model\comments::latest()->paginate(10);
+//        $this->comments = $allComments;
+//    }
     //real time validation
     public function updated($propertyName)
     {
@@ -28,7 +31,7 @@ class Comments extends Component
         //delete
         $comment->delete();
         //remove from $comments collection
-        $this->comments=$this->comments->except($commnetId);
+        //$this->comments=$this->comments->except($commnetId);
         session()->flash('message', 'Post successfully deleted 😊');
     }
     public function addComment(){
@@ -38,13 +41,15 @@ class Comments extends Component
            'body'=>$this->newComment
        ]);
        //push the new comment to array comments
-       $this->comments->prepend($addNewComments);
+      // $this->comments->prepend($addNewComments);
        $this->newComment ="";
         session()->flash('message', 'Post successfully added 😊');
 
     }
     public function render()
     {
-        return view('livewire.comments');
+        return view('livewire.comments',[
+            'comments' =>\App\Model\comments::latest()->paginate(2)
+        ]);
     }
 }

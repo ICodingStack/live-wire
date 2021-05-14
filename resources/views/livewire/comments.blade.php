@@ -38,6 +38,7 @@
 
     @endforeach
 
+    {{ $comments->links('pagination-page') }}
 
 
 </div>
