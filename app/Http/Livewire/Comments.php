@@ -10,13 +10,20 @@ class Comments extends Component
     public  $comments   ;
     public $newComment;
 
+
+    //auto excuited
     public function mount(){
         $allComments = \App\Model\comments::latest()->get();
         $this->comments = $allComments;
     }
+    //real time validation
+    public function updated($propertyName)
+    {
+        $this->validate([$propertyName=>'required|max:255']);
+    }
 
     public function addComment(){
-         if($this->newComment =="") return;
+         $this->validate(['newComment'=>'required|max:255']);
        $addNewComments=\App\Model\comments::create([
            'user_id'=>1,
            'body'=>$this->newComment

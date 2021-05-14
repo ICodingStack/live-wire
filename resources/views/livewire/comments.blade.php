@@ -3,9 +3,11 @@
     <div class="flex justify-center">
 
         <div class="w-6/12">
+            @error('newComment') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
             <form class="my-6 flex" wire:submit.prevent="addComment">
                 <input type="text" class="w-full rounded border shadow p-2 mr-2 my-2" placeholder="What's in your mind."
-                       wire:model.lazy="newComment">
+                       wire:model.debounce.500ms="newComment">
+
                 <div class="py-2">
                     <button class="p-2 bg-blue-500 w-20 rounded shadow text-white">Add</button>
                 </div>
