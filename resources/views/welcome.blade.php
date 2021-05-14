@@ -14,7 +14,7 @@
     <div class="w-10/12 my-8 flex">
 
         <div class="w-7/12 mx-2 rounded border p-2">
-            <livewire:comments />
+            <livewire:comments  />
         </div>
     </div>
 

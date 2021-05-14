@@ -7,22 +7,22 @@ use Livewire\Component;
 
 class Comments extends Component
 {
-    public  $comments = [
-      [
-          'body' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi blanditiis enim excepturi neque placeat quasi sed sequi tempora voluptas. Ab deserunt dolor doloribus earum nihil non nulla ratione sunt?',
-          'created_at' => '3 min ago',
-          'creator' => 'IBRA'
-      ]
-    ];
+    public  $comments   ;
     public $newComment;
+
+    public function mount(){
+        $allComments = \App\Model\comments::all();
+        $this->comments = $allComments;
+    }
     public function addComment(){
          if($this->newComment =="") return;
-        array_unshift($this->comments,[
-            'body' => $this->newComment,
-            'created_at' => Carbon::now()->diffForHumans(),
-            'creator' => 'Joe'
-        ]);
+       \App\Model\comments::create([
+           'user_id'=>1,
+           'body'=>$this->newComment
+       ]);
         $this->newComment ="";
+        $allComments = \App\Model\comments::all();
+        $this->comments = $allComments;
     }
     public function render()
     {
