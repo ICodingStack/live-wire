@@ -7,6 +7,7 @@ use Livewire\Component;
 
 class Comments extends Component
 {
+    //comments collection
     public  $comments   ;
     public $newComment;
 
@@ -21,7 +22,14 @@ class Comments extends Component
     {
         $this->validate([$propertyName=>'required|max:255']);
     }
-
+    //remove comment
+    public function remove($commnetId){
+        $comment = \App\Model\comments::find($commnetId);
+        //delete
+        $comment->delete();
+        //remove from $comments collection
+        $this->comments=$this->comments->except($commnetId);
+    }
     public function addComment(){
          $this->validate(['newComment'=>'required|max:255']);
        $addNewComments=\App\Model\comments::create([
