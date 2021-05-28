@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use Carbon\Carbon;
 use Livewire\Component;
 use Livewire\WithPagination;
+use phpDocumentor\Reflection\Types\Array_;
 
 
 class Comments extends Component
@@ -12,6 +13,12 @@ class Comments extends Component
     //comments collection
 //    public  $comments   ;
     public $newComment;
+    public $image;
+    protected $listeners = ['fileupload' => 'handleImage'];
+
+    public function handleImage($imageData){
+        $this->image=$imageData;
+    }
     //allow u to navigate to next page without reload the page
     use WithPagination;
 

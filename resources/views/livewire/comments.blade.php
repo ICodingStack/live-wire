@@ -11,6 +11,10 @@
                     </div>
                 @endif
             </div>
+            <section>
+                <img src="{{$image}}" alt="" width="200">
+                <input type="file" id="image" wire:change="$emit('fileChoosen')">
+            </section>
 
             <form class="my-6 flex" wire:submit.prevent="addComment">
                 <input type="text" class="w-full rounded border shadow p-2 mr-2 my-2" placeholder="What's in your mind."
@@ -42,5 +46,17 @@
 
 
 </div>
+
+<script>
+    Livewire.on('fileChoosen', () => {
+        let filed =document.getElementById('image');
+        let file = filed.files[0];
+        let render = new FileReader();
+        render.onloadend = () => {
+            window.livewire.emit('fileupload',render.result);
+        }
+        render.readAsDataURL(file);
+    })
+</script>
 
 
