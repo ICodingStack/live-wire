@@ -20,6 +20,7 @@ class CreateCommentsTable extends Migration
             $table->foreign('user_id')->references('id')
                 ->on('users')
                 ->onDelete('CASCADE');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

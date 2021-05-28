@@ -13,6 +13,7 @@ class comments extends Model
         'id',
         'user_id',
         'body',
+        'image',
         'created_at',
         'updated_at'
     ];
